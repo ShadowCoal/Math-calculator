@@ -1,0 +1,19 @@
+
+public class PascalTri {
+public static void main(String[]args){
+	int[][]row = new int[9][9];
+	row[0][0]= 1;
+	System.out.println(row[0][0]);
+	
+	int y = 0;
+	for (int x = 1; x < 9; x++){
+		row[x][0] = 1;
+		System.out.print(row[x][0] + " ");
+		for ( y = 1; y <= x; y++){
+			row[x][y] = row[x-1][y-1] +row[x-1][y];
+			System.out.print(row[x][y] + " ");
+		}
+		System.out.println();
+	}
+}
+}
