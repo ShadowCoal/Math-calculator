@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class SigmaBasic {
+	private static Scanner input;
+public static void main(String[]args){
+	input = new Scanner(System.in);
+	System.out.print("input start: ");
+	int k = input.nextInt();
+	System.out.print("input stop: ");
+	int stop = input.nextInt();
+	System.out.print("input power: ");
+	int pow = input.nextInt();
+	int n = k;
+	int[]group = new int[stop - k];
+	int total =0;
+	for(int x = 0; x < (stop - k); x++){
+		group[x] = power(n, pow);
+		total += group[x];
+		System.out.print(group[x]);
+		if (x != (stop - k -1)){
+			System.out.print(" + ");
+		}
+		else
+			System.out.println(" = " + total);
+		n = n +1;
+	}
+}
+public static int power(int n,int pow){
+	
+	if (pow == 0)
+		return 1;
+	
+	else return n* power(n, pow -1);
+}
+}
