@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+
+public class Hexadecimal {
+static Scanner input= new Scanner(System.in);
+public static void main(String[]args){
+	System.out.print("input letter ");
+	String letter = input.next();
+	char x = letter.charAt(0);
+	int y = 9;
+	switch(x){
+	
+	case'z':y++;
+	case'y':y++;
+	case'x':y++;
+	case'w':y++;
+	case'v':y++;
+	case'u':y++;
+	case't':y++;
+	case's':y++;
+	case'r':y++;
+	case'q':y++;
+	case'p':y++;
+	case'o':y++;
+	case'n':y++;
+	case'm':y++;
+	case'l':y++;
+	case'k':y++;
+	case'j':y++;
+	case'i':y++;
+	case'h':y++;
+	case'g':y++;
+	case'f':y++;
+	case'e':y++;
+	case'd':y++;
+	case'c':y++;
+	case'b':y++;
+	case'a':y++;
+	break;
+	}
+	System.out.print(y);
+}
+}
